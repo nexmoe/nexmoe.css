@@ -1,0 +1,247 @@
+:root {
+	--active-brightness: 0.7;
+	--hover-brightness: 1.3;
+	--border-radius: 6px;
+	--color-primary: rgb(23, 23, 23);
+	--color-link: #df5d64;
+	--color-text: rgb(23, 23, 23);
+	--color-bg: #fff;
+	box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-primary: #fff;
+		--color-text: #f7f7f7;
+		--color-bg: #111;
+	}
+}
+
+body {
+	margin: 0;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+input[type="radio"],
+input[type="checkbox"],
+label,
+details {
+	cursor: pointer;
+}
+
+a {
+	color: var(--color-link);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	filter: brightness(var(--hover-brightness));
+}
+
+a:active {
+	filter: brightness(var(--active-brightness));
+}
+
+aside {
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	overflow: hidden;
+	border: 2px solid var(--color-text);
+	margin: 1rem 0;
+}
+
+details + div {
+	max-height: 0;
+	transition: max-height 0.2s ease-in-out;
+	overflow: hidden;
+	margin: 0 -1rem;
+	padding: 0 1rem;
+	opacity: 0;
+}
+
+details[open] + div {
+	max-height: 1000px;
+	margin-top: 1rem;
+	opacity: 1;
+	border-top: 2px solid var(--color-text);
+}
+
+details[open] + div > *:last-child {
+	margin-bottom: 0;
+}
+
+h2 {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 1rem;
+}
+
+main {
+	max-width: 960px;
+	margin: 50px auto;
+	padding: 0 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	height: 16px;
+	width: 16px;
+}
+
+input[type="checkbox"] {
+	transform: translateY(3px);
+}
+
+input[type="radio"] {
+	transform: translate(-1px, 3px);
+}
+
+button:active,
+input[type="button"]:active,
+input[type="radio"]:active,
+input[type="range"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	transform: translateY(2px);
+	transition: transform 0.1s;
+}
+
+input[type="radio"]:active {
+	transition: transform 0.1s;
+	transform: translate(-1px, 5px);
+}
+
+input[type="checkbox"]:active {
+	transition: transform 0.1s;
+	transform: translateY(5px);
+}
+
+img {
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 0 1px #eee;
+}
+
+p {
+	margin: 1rem 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	text-align: center;
+	line-height: 17px;
+	position: relative;
+}
+
+input[type="checkbox"]::before,
+input[type="radio"]::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	border: 2px solid var(--color-primary);
+	border-radius: 3px;
+}
+
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+	content: "\2714";
+	font-size: 16px;
+	background-color: var(--color-primary);
+	color: #fff;
+}
+
+input[type="radio"]::before {
+	border-radius: 50%;
+}
+
+/* Nav */
+nav {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+}
+
+nav > a {
+	font-size: 1.5rem;
+}
+
+nav a {
+	color: var(--color-text);
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	position: relative;
+}
+
+nav ul li a {
+	transition: background-color 0.1s ease-in-out;
+	padding: 0.5rem 1rem;
+	border-radius: 30px;
+	color: var(--color-text);
+}
+
+nav ul li a:hover {
+	background-color: rgb(140, 140, 140, 0.2);
+	text-decoration: none;
+	filter: unset;
+}
+
+nav ul li a[checked],
+nav ul li a:active {
+	transition: none;
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+}
+
+/* Nav Dropdown */
+nav ul li:hover ul {
+	display: block;
+}
+
+nav ul li ul {
+	background: var(--color-bg);
+	border-radius: var(--border-radius);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	display: none;
+	height: auto;
+	left: -2px;
+	padding: 1rem 0.8rem;
+	position: absolute;
+	top: 1.7rem;
+	white-space: nowrap;
+	width: auto;
+	z-index: 1;
+}
+
+nav ul li ul::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -0.5rem;
+	height: 0.5rem;
+}
+
+nav ul li ul li,
+nav ul li ul li a {
+	display: block;
+}
+
+nav ul li ul li a {
+	border-radius: var(--border-radius);
+}

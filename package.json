@@ -1,0 +1,31 @@
+{
+  "name": "nexmoe.css",
+  "version": "0.0.1",
+  "description": "Use only HTML to write modern websites with smooth animations and beautiful interfaces.",
+  "main": "nexmoe.css",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexmoe/nexmoe.css.git"
+  },
+  "keywords": [
+    "CSS",
+    "HTML",
+    "stylesheet",
+    "modern",
+    "nexmoe"
+  ],
+  "author": "Nexmoe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nexmoe/nexmoe.css/issues"
+  },
+  "homepage": "https://github.com/nexmoe/nexmoe.css#readme"
+}
