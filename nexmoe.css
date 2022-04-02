@@ -26,6 +26,14 @@ body {
 	color: var(--color-text);
 }
 
+header {
+	text-align: center;
+}
+
+header h2 {
+	border-bottom: none;
+}
+
 input[type="radio"],
 input[type="checkbox"],
 label,
@@ -78,6 +86,7 @@ details[open] + div > *:last-child {
 h2 {
 	border-bottom: 2px solid #ccc;
 	padding-bottom: 1rem;
+	margin: 2.5rem 0;
 }
 
 main {
@@ -169,7 +178,7 @@ nav {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem 2rem;
+	margin: 1rem 2rem;
 	font-size: 1.2rem;
 }
 
