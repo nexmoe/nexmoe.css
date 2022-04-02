@@ -28,6 +28,7 @@ body {
 
 header {
 	text-align: center;
+	line-height: 1.5;
 }
 
 header h2 {
@@ -53,6 +54,16 @@ a:hover {
 
 a:active {
 	filter: brightness(var(--active-brightness));
+}
+
+h2 {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 1rem;
+	margin: 2.5rem 0;
+}
+
+mark {
+	padding: 0 0.25rem;
 }
 
 aside {
@@ -81,12 +92,6 @@ details[open] + div {
 
 details[open] + div > *:last-child {
 	margin-bottom: 0;
-}
-
-h2 {
-	border-bottom: 2px solid #ccc;
-	padding-bottom: 1rem;
-	margin: 2.5rem 0;
 }
 
 main {
@@ -178,7 +183,7 @@ nav {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	margin: 1rem 2rem;
+	margin: 1rem 3rem;
 	font-size: 1.2rem;
 }
 
