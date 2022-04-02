@@ -6,7 +6,6 @@
 	--color-link: #df5d64;
 	--color-text: rgb(23, 23, 23);
 	--color-bg: #fff;
-	box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +14,10 @@
 		--color-text: #f7f7f7;
 		--color-bg: #111;
 	}
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
@@ -209,23 +212,27 @@ nav ul li a:active {
 }
 
 /* Nav Dropdown */
-nav ul li:hover ul {
-	display: block;
-}
-
 nav ul li ul {
 	background: var(--color-bg);
 	border-radius: var(--border-radius);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-	display: none;
 	height: auto;
-	left: -2px;
 	padding: 1rem 0.8rem;
 	position: absolute;
 	top: 1.7rem;
 	white-space: nowrap;
 	width: auto;
+	min-width: 100%;
+	transform: translateY(-8px);
+	transition: all 0.2s ease-in-out;
+	z-index: -1;
+	opacity: 0;
+}
+
+nav ul li:hover ul {
 	z-index: 1;
+	opacity: 1;
+	transform: translateY(0);
 }
 
 nav ul li ul::before {
