@@ -2,7 +2,7 @@
 
 :root {
 	--active-brightness: 0.7;
-	--hover-brightness: 1.3;
+	--hover-brightness: 1.5;
 	--border-radius: 6px;
 	--color-primary: rgb(23, 23, 23);
 	--color-link: #df5d64;
@@ -186,6 +186,44 @@ input[type="radio"]:checked::before {
 
 input[type="radio"]::before {
 	border-radius: 50%;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	cursor: pointer;
+	border: none;
+	padding: 0.6rem 1rem;
+	border-radius: var(--border-radius);
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+	font-size: 1rem;
+	font-weight: bold;
+	transition: background-color 0.2s ease-in-out;
+}
+
+button:hover,
+input[type="button"]:hover {
+	filter: brightness(var(--hover-brightness));
+}
+
+button:active,
+input[type="button"]:active {
+	filter: brightness(var(--active-brightness));
+}
+
+input,
+select,
+textarea {
+	font-size: 1rem;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1rem;
+}
+
+input[type="color"] {
+	padding: 1px 4px;
 }
 
 /* Nav */
