@@ -9,6 +9,7 @@ Use only HTML to write modern websites with smooth animations and beautiful inte
 - Beautiful interfaces
 - Responsive
 - Tiny size
+- No classes
 
 # Getting Started
 
