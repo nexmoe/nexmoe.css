@@ -37,6 +37,10 @@ header h2 {
 	border-bottom: none;
 }
 
+section {
+	margin: 4rem 0;
+}
+
 input[type="radio"],
 input[type="checkbox"],
 label,
