@@ -22,6 +22,7 @@
 	box-sizing: border-box;
 }
 
+/* Layout */
 body {
 	margin: 0;
 	background-color: var(--color-bg);
@@ -37,17 +38,17 @@ header h2 {
 	border-bottom: none;
 }
 
+main {
+	max-width: 960px;
+	margin: 50px auto;
+	padding: 0 1rem;
+}
+
 section {
 	margin: 4rem 0;
 }
 
-input[type="radio"],
-input[type="checkbox"],
-label,
-details {
-	cursor: pointer;
-}
-
+/* Typography */
 a {
 	color: var(--color-link);
 	text-decoration: none;
@@ -72,6 +73,16 @@ mark {
 	padding: 0 0.25rem;
 }
 
+img {
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 0 1px #eee;
+}
+
+p {
+	margin: 1rem 0;
+}
+
+/* Other */
 aside {
 	border-radius: var(--border-radius);
 	padding: 1rem;
@@ -100,12 +111,14 @@ details[open] + div > *:last-child {
 	margin-bottom: 0;
 }
 
-main {
-	max-width: 960px;
-	margin: 50px auto;
-	padding: 0 1rem;
+input[type="radio"],
+input[type="checkbox"],
+label,
+details {
+	cursor: pointer;
 }
 
+/* Form */
 input[type="radio"],
 input[type="checkbox"] {
 	height: 16px;
@@ -138,15 +151,6 @@ input[type="radio"]:active {
 input[type="checkbox"]:active {
 	transform: translateY(5px);
 	transition: transform 0.1s;
-}
-
-img {
-	border-radius: var(--border-radius);
-	box-shadow: 0 0 0 1px #eee;
-}
-
-p {
-	margin: 1rem 0;
 }
 
 input[type="checkbox"],
