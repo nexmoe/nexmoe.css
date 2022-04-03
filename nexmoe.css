@@ -27,11 +27,12 @@ body {
 	margin: 0;
 	background-color: var(--color-bg);
 	color: var(--color-text);
+	line-height: 1.5;
 }
 
 header {
 	text-align: center;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 header h2 {
@@ -63,10 +64,28 @@ a:active {
 	filter: brightness(var(--active-brightness));
 }
 
+h1 {
+	font-size: 2.7rem;
+}
+
 h2 {
-	border-bottom: 2px solid #ccc;
-	padding-bottom: 1rem;
-	margin: 2.5rem 0;
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.17rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.83rem;
 }
 
 mark {
@@ -80,6 +99,25 @@ img {
 
 p {
 	margin: 1rem 0;
+}
+
+kbd {
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-bottom: 3px solid var(--color-text);
+    border-radius: 5px;
+    padding: 0.3rem 0.55rem;
+}
+
+hr {
+	border: none;
+	border-top: 2px solid #ccc;
+	margin: 1rem 0;
+}
+
+blockquote {
+	border-left: 6px solid;
+    padding: 1px 2rem;
 }
 
 /* Other */
