@@ -33,6 +33,7 @@ body {
 header {
 	text-align: center;
 	line-height: 1.7;
+	padding: 0 2rem;
 }
 
 header h2 {
