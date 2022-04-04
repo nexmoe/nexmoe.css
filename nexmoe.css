@@ -51,6 +51,14 @@ section {
 	margin: 4rem 0;
 }
 
+article {
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	overflow: hidden;
+	border: 2px solid var(--color-text);
+	margin: 1rem 0;
+}
+
 /* Typography */
 a {
 	color: var(--color-link);
@@ -123,14 +131,6 @@ blockquote {
 }
 
 /* Other */
-aside {
-	border-radius: var(--border-radius);
-	padding: 1rem;
-	overflow: hidden;
-	border: 2px solid var(--color-text);
-	margin: 1rem 0;
-}
-
 details + div {
 	max-height: 0;
 	overflow: hidden;
