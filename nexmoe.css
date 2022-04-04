@@ -4,11 +4,11 @@
 	--active-brightness: 0.7;
 	--hover-brightness: 1.5;
 	--border-radius: 6px;
-	--color-primary: rgb(23, 23, 23);
+	--color-primary:rgb(23, 23, 23);
 	--color-link: #df5d64;
 	--color-text: rgb(23, 23, 23);
 	--color-bg: #fff;
-	--color-hover-shadow: rgb(23, 23, 23, 0.2);
+	--color-hover: rgba(23, 23, 23, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -212,7 +212,7 @@ input:hover,
 select:hover,
 textarea:hover {
 	filter: brightness(var(--hover-brightness));
-	box-shadow: 0 0 1px 2px var(--color-hover-shadow);
+	box-shadow: 0 0 0 2px var(--color-hover);
 }
 
 button:active,
@@ -271,7 +271,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	background-color: rgb(140, 140, 140, 0.2);
+	color: var(--color-primary);
+	background-color: var(--color-hover);
 	text-decoration: none;
 	filter: unset;
 }
