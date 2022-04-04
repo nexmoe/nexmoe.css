@@ -8,6 +8,7 @@
 	--color-link: #df5d64;
 	--color-text: rgb(23, 23, 23);
 	--color-bg: #fff;
+	--color-hover-shadow: rgb(23, 23, 23, 0.2);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,11 +104,11 @@ p {
 }
 
 kbd {
-    color: var(--color-text);
-    border: 1px solid var(--color-text);
-    border-bottom: 3px solid var(--color-text);
-    border-radius: 5px;
-    padding: 0.3rem 0.55rem;
+	color: var(--color-text);
+	border: 1px solid var(--color-text);
+	border-bottom: 3px solid var(--color-text);
+	border-radius: 5px;
+	padding: 0.3rem 0.55rem;
 }
 
 hr {
@@ -118,7 +119,7 @@ hr {
 
 blockquote {
 	border-left: 6px solid;
-    padding: 1px 2rem;
+	padding: 1px 2rem;
 }
 
 /* Other */
@@ -158,72 +159,36 @@ details {
 }
 
 /* Form */
-input[type="radio"],
-input[type="checkbox"] {
-	height: 16px;
-	width: 16px;
-}
-
-input[type="checkbox"] {
-	transform: translateY(3px);
-}
-
-input[type="radio"] {
-	transform: translate(-1px, 3px);
-}
-
 button:active,
-input[type="button"]:active,
-input[type="radio"]:active,
-input[type="range"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
+input:active {
 	transform: translateY(2px);
-	transition: transform 0.1s;
-}
-
-input[type="radio"]:active {
-	transform: translate(-1px, 5px);
-	transition: transform 0.1s;
-}
-
-input[type="checkbox"]:active {
-	transform: translateY(5px);
 	transition: transform 0.1s;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	width: 17px;
-	height: 17px;
-	display: inline-block;
-	text-align: center;
-	line-height: 17px;
-	position: relative;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-top: 0;
+	margin-right: 0.3rem;
+	margin-left: 0;
+	vertical-align: middle;
+	padding: 0;
 }
 
-input[type="checkbox"]::before,
-input[type="radio"]::before {
-	content: "";
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	background-color: var(--color-bg);
-	width: 100%;
-	height: 100%;
-	border: 2px solid var(--color-primary);
-	border-radius: 3px;
-}
-
-input[type="checkbox"]:checked::before,
-input[type="radio"]:checked::before {
-	content: "\2714";
-	font-size: 16px;
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
 	background-color: var(--color-primary);
-	color: var(--color-bg);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+	background-position: center;
+	background-size: 0.75em auto;
+	background-repeat: no-repeat;
 }
 
-input[type="radio"]::before {
+input[type="radio"] {
 	border-radius: 50%;
 }
 
@@ -232,33 +197,39 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"] {
 	cursor: pointer;
-	border: none;
-	padding: 0.6rem 1rem;
-	border-radius: var(--border-radius);
 	background-color: var(--color-primary);
 	color: var(--color-bg);
-	font-size: 1rem;
-	font-weight: bold;
-	transition: background-color 0.2s ease-in-out;
+}
+
+button,
+input,
+select {
+	transition: all 0.1s ease-in-out;
 }
 
 button:hover,
-input[type="button"]:hover {
+input:hover,
+select:hover,
+textarea:hover {
 	filter: brightness(var(--hover-brightness));
+	box-shadow: 0 0 1px 2px var(--color-hover-shadow);
 }
 
 button:active,
-input[type="button"]:active {
+input:active,
+select:active,
+textarea:active {
 	filter: brightness(var(--active-brightness));
 }
 
+button,
 input,
 select,
 textarea {
-	font-size: 1rem;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--border-radius);
-    padding: 0.6rem 1rem;
+	font-size: 1.2rem;
+	border: 2px solid var(--color-primary);
+	border-radius: var(--border-radius);
+	padding: 0.6rem 1rem;
 }
 
 input[type="color"] {
