@@ -46,6 +46,16 @@ header h2 {
 	border-bottom: none;
 }
 
+footer {
+	margin: 6rem 3rem;
+}
+
+@media (max-width: 768px) {
+	footer {
+		margin: 4rem 1rem;
+	}
+}
+
 main {
 	max-width: 960px;
 	margin: 50px auto;
@@ -315,6 +325,7 @@ nav a {
 nav ul {
 	list-style: none;
 	padding: 0;
+	margin: -0.2rem;
 }
 
 nav ul li {
