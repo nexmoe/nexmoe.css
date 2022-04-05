@@ -58,10 +58,17 @@ section {
 
 article {
 	border-radius: var(--border-radius);
-	padding: 1rem;
 	overflow: hidden;
 	border: 2px solid var(--color-text);
-	margin: 1rem 0;
+	box-shadow: 0 4px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
+article > *:first-child {
+	margin-top: 0;
+}
+
+article > *:last-child {
+	margin-bottom: 0;
 }
 
 /* Typography */
@@ -135,6 +142,14 @@ blockquote {
 	padding: 1px 2rem;
 }
 
+code {
+	padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(175,184,193,0.2);
+    border-radius: 6px;
+}
+
 /* Other */
 details summary::marker {
 	content: none;
@@ -158,11 +173,16 @@ details[open] summary::after {
 	transform: rotate(0deg);
 }
 
+details summary {
+	padding: 1rem;
+	padding-bottom: 0;
+}
+
 details + div {
 	max-height: 0;
 	overflow: hidden;
-	margin: 0 -1rem;
-	padding: 0 1rem;
+	padding: 1rem;
+	padding-top: 0;
 	opacity: 0;
 	transition: max-height 0.2s ease-in-out;
 }
