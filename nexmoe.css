@@ -9,6 +9,7 @@
 	--color-text: rgb(23, 23, 23);
 	--color-bg: #fff;
 	--color-hover: rgba(23, 23, 23, 0.15);
+	--icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,8 @@
 		--color-text: #f7f7f7;
 		--color-bg: #111;
 		--color-hover: rgba(230, 230, 230, 0.15);
+		--icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+
 	}
 }
 
@@ -182,10 +185,11 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+	background-image: var(--icon-checkbox);
 	background-position: center;
 	background-size: 0.75em auto;
 	background-repeat: no-repeat;
+	background-color: var(--color-primary);
 }
 
 input[type="radio"] {
@@ -245,12 +249,24 @@ nav {
 	font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+	nav {
+		margin: 1rem;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	nav ul {
+		text-align: center;
+	}
+}
+
 nav > a {
 	font-size: 1.5rem;
 }
 
 nav a {
 	color: var(--color-text);
+	display: block;
 }
 
 nav ul {
@@ -261,6 +277,7 @@ nav ul {
 nav ul li {
 	display: inline-block;
 	position: relative;
+	margin: 0.2rem;
 }
 
 nav ul li a {
@@ -292,7 +309,7 @@ nav ul li ul {
 	height: auto;
 	padding: 1rem 0.8rem;
 	position: absolute;
-	top: 1.7rem;
+	top: 2.5rem;
 	white-space: nowrap;
 	width: auto;
 	min-width: 100%;
@@ -317,8 +334,7 @@ nav ul li ul::before {
 	height: 0.5rem;
 }
 
-nav ul li ul li,
-nav ul li ul li a {
+nav ul li ul li {
 	display: block;
 }
 
