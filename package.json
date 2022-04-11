@@ -1,6 +1,6 @@
 {
   "name": "nexmoe.css",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Use only HTML to write modern websites with smooth animations and beautiful interfaces.",
   "main": "nexmoe.css",
   "devDependencies": {
