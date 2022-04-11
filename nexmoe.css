@@ -34,12 +34,12 @@ body {
 	background-color: var(--color-bg);
 	color: var(--color-text);
 	line-height: 1.5;
+	padding: 0 3rem;
 }
 
 header {
 	text-align: center;
 	line-height: 1.7;
-	padding: 0 2rem;
 }
 
 header h2 {
@@ -47,7 +47,7 @@ header h2 {
 }
 
 footer {
-	margin: 6rem 3rem;
+	margin: 6rem 0;
 }
 
 @media (max-width: 768px) {
@@ -292,7 +292,7 @@ nav {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	margin: 1rem 3rem;
+	margin: 1rem 0;
 	font-size: 1.2rem;
 }
 
