@@ -329,9 +329,9 @@ nav ul li {
 }
 
 nav ul li a {
+	min-width: 2rem;
 	padding: 0.5rem 1rem;
 	border-radius: 30px;
-	color: var(--color-text);
 	transition: background-color 0.1s ease-in-out;
 }
 
