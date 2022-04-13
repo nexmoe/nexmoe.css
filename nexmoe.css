@@ -4,7 +4,7 @@
 	--active-brightness: 0.7;
 	--hover-brightness: 1.5;
 	--border-radius: 6px;
-	--color-primary:rgb(23, 23, 23);
+	--color-primary: rgb(23, 23, 23);
 	--color-link: #df5d64;
 	--color-text: rgb(23, 23, 23);
 	--color-bg: #fff;
@@ -35,6 +35,12 @@ body {
 	color: var(--color-text);
 	line-height: 1.5;
 	padding: 0 3rem;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 0 1rem;
+	}
 }
 
 header {
@@ -153,11 +159,11 @@ blockquote {
 }
 
 code {
-	padding: .2em .4em;
-    margin: 0;
-    font-size: 85%;
-    background-color: rgba(175,184,193,0.2);
-    border-radius: 6px;
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(175, 184, 193, 0.2);
+	border-radius: 6px;
 }
 
 /* Other */
@@ -165,18 +171,18 @@ details summary::marker {
 	content: none;
 }
 details summary::after {
-    display: block;
-    width: 1rem;
-    height: 1rem;
+	display: block;
+	width: 1rem;
+	height: 1rem;
 	margin-top: 0.25rem;
-    float: right;
-    transform: rotate(-90deg);
-    background-image: var(--icon-summary);
-    background-position: right center;
-    background-size: 1rem auto;
-    background-repeat: no-repeat;
-    content: "";
-    transition: transform 0.2s ease-in-out;
+	float: right;
+	transform: rotate(-90deg);
+	background-image: var(--icon-summary);
+	background-position: right center;
+	background-size: 1rem auto;
+	background-repeat: no-repeat;
+	content: "";
+	transition: transform 0.2s ease-in-out;
 }
 
 details[open] summary::after {
@@ -200,7 +206,6 @@ details[open] + div {
 	opacity: 1;
 	border-top: 2px solid var(--color-text);
 }
-
 
 input[type="radio"],
 input[type="checkbox"],
