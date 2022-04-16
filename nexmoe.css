@@ -267,15 +267,7 @@ button:hover,
 input:hover,
 select:hover,
 textarea:hover {
-	filter: brightness(var(--hover-brightness));
 	box-shadow: 0 0 0 2px var(--color-hover);
-}
-
-button:active,
-input:active,
-select:active,
-textarea:active {
-	filter: brightness(var(--active-brightness));
 }
 
 button,
