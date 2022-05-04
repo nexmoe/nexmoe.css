@@ -1,8 +1,8 @@
 /* Nexmoe.css - https://github.com/nexmoe/nexmoe.css */
 
 :root {
-	--active-brightness: 0.7;
-	--hover-brightness: 1.5;
+	--active-brightness: 0.8;
+	--hover-brightness: 1.2;
 	--border-radius: 6px;
 	--color-primary: rgb(23, 23, 23);
 	--color-link: #df5d64;
@@ -53,12 +53,12 @@ header h2 {
 }
 
 footer {
-	margin: 6rem 0;
+	padding: 2rem 0;
 }
 
 @media (max-width: 768px) {
 	footer {
-		margin: 4rem 1rem;
+		padding: 2rem 1rem;
 	}
 }
 
