@@ -53,12 +53,12 @@ header h2 {
 }
 
 footer {
-	margin: 6rem 0;
+	padding: 2rem 0;
 }
 
 @media (max-width: 768px) {
 	footer {
-		margin: 4rem 1rem;
+		padding: 2rem 1rem;
 	}
 }
 
