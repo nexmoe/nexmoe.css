@@ -220,6 +220,18 @@ dialog {
 	border: none;
     border-radius: var(--border-radius);
 	padding: calc(var(--nexmoe-gap) * 1.5);
+	animation-name: dialogScaleIn;
+	animation-duration: 0.2s;
+}
+
+@keyframes dialogScaleIn {
+  from {
+    transform: scale(0.5,0.5);
+  }
+
+  to {
+	transform: scale(1,1);
+  }
 }
 
 dialog menu {
