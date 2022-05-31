@@ -268,6 +268,37 @@
 
 			<section>
 				<header>
+					<h1>Dialog / 对话框</h1>
+				</header>
+				<p>
+					<button onclick="dialogOpen()">Open Dialog</button>
+					<script>
+						const dialogOpen = () => {
+							const dialog = document.getElementById("favDialog");
+							dialog.showModal();
+						};
+					</script>
+				</p>
+				<dialog id="favDialog">
+					<form method="dialog">
+						<fieldset>
+							<legend>Life is:</legend>
+							<div>
+								<input type="text" value="beautiful" />
+								<p>and</p>
+								<input type="text" value="awesome" />
+							</div>
+						</fieldset>
+						<menu>
+							<button value="cancel" text>Cancel</button>
+							<button value="default">OK</button>
+						</menu>
+					</form>
+				</dialog>
+			</section>
+
+			<section>
+				<header>
 					<h1>Other / 其它</h1>
 				</header>
 				<article>
