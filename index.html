@@ -16,6 +16,16 @@
 			article {
 				padding: 2rem;
 			}
+			articlegrid {
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 2rem;
+				display: grid;
+			}
+			@media (max-width: 700px) {
+				articlegrid {
+					grid-template-columns: 1fr;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -73,13 +83,7 @@
 					<h1>Features</h1>
 					<p></p>
 				</header>
-				<div
-					style="
-						grid-template-columns: 1fr 1fr;
-						grid-gap: 2rem;
-						display: grid;
-					"
-				>
+				<articlegrid>
 					<article>
 						<h2>Use only HTML</h2>
 						<p>
@@ -111,7 +115,7 @@
 						<h2>No classes</h2>
 						<p>No classes to make your code more readable.</p>
 					</article>
-				</div>
+				</articlegrid>
 			</section>
 		</main>
 		<footer>
