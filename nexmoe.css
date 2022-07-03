@@ -215,41 +215,41 @@ details {
 	cursor: pointer;
 }
 
-label>input:not([type=checkbox]):not([type=radio]),
-label>select {
-  display: block;
-  margin-top: 0.3em;
+label > input:not([type="checkbox"]):not([type="radio"]),
+label > select {
+	display: block;
+	margin-top: 0.3em;
 }
 
 dialog {
 	box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
 	border: none;
-    border-radius: var(--border-radius);
+	border-radius: var(--border-radius);
 	padding: calc(var(--nexmoe-gap) * 1.5);
 	animation-name: dialogScaleIn;
 	animation-duration: 0.2s;
 }
 
 @keyframes dialogScaleIn {
-  from {
-    transform: scale(0.5,0.5);
-  }
+	from {
+		transform: scale(0.5, 0.5);
+	}
 
-  to {
-	transform: scale(1,1);
-  }
+	to {
+		transform: scale(1, 1);
+	}
 }
 
 dialog menu {
 	display: flex;
-    gap: var(--nexmoe-gap);
-    justify-content: flex-end;
+	gap: var(--nexmoe-gap);
+	justify-content: flex-end;
 	margin-bottom: 0;
 }
 
 dialog fieldset {
 	border: 0;
-    margin: unset;
+	margin: unset;
 	padding: unset;
 }
 
@@ -435,4 +435,29 @@ nav ul li ul li {
 
 nav ul li ul li a {
 	border-radius: var(--border-radius);
+}
+
+/* Table */
+table {
+	font-size: 1.2rem;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 0.6em 1.2em;
+	text-align: left;
+}
+
+th {
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
 }
