@@ -215,6 +215,12 @@ details {
 	cursor: pointer;
 }
 
+label>input:not([type=checkbox]):not([type=radio]),
+label>select {
+  display: block;
+  margin-top: 0.3em;
+}
+
 dialog {
 	box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
 	border: none;
