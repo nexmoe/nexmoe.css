@@ -226,6 +226,8 @@ dialog {
 	border: none;
 	border-radius: var(--border-radius);
 	padding: calc(var(--nexmoe-gap) * 1.5);
+	background-color: var(--color-bg);
+    color: var(--color-text);
 	animation-name: dialogScaleIn;
 	animation-duration: 0.2s;
 }
