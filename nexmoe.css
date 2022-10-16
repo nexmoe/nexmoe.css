@@ -1,5 +1,7 @@
 /* Nexmoe.css - https://github.com/nexmoe/nexmoe.css */
 
+/* Variables */
+
 :root {
 	--active-brightness: 0.8;
 	--hover-brightness: 1.2;
@@ -30,6 +32,7 @@
 }
 
 /* Layout */
+
 body {
 	margin: 0;
 	background-color: var(--color-bg);
@@ -89,6 +92,7 @@ article > *:last-child {
 }
 
 /* Typography */
+
 a {
 	color: var(--color-link);
 	text-decoration: none;
@@ -168,9 +172,11 @@ code {
 }
 
 /* Other */
+
 details summary::marker {
 	content: none;
 }
+
 details summary::after {
 	display: block;
 	width: 1rem;
@@ -227,7 +233,7 @@ dialog {
 	border-radius: var(--border-radius);
 	padding: calc(var(--nexmoe-gap) * 1.5);
 	background-color: var(--color-bg);
-    color: var(--color-text);
+	color: var(--color-text);
 	animation-name: dialogScaleIn;
 	animation-duration: 0.2s;
 }
@@ -261,6 +267,7 @@ dialog fieldset legend {
 }
 
 /* Form */
+
 button:active,
 input:active {
 	transform: translateY(2px);
@@ -270,8 +277,8 @@ input:active {
 input[type="checkbox"],
 input[type="radio"] {
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 	width: 1.25rem;
 	height: 1.25rem;
 	margin-top: 0;
@@ -337,6 +344,7 @@ input[type="color"] {
 }
 
 /* Nav */
+
 nav {
 	align-items: center;
 	display: flex;
@@ -399,6 +407,7 @@ nav ul li a:active {
 }
 
 /* Nav Dropdown */
+
 nav ul li ul {
 	background: var(--color-bg);
 	border-radius: var(--border-radius);
@@ -440,6 +449,7 @@ nav ul li ul li a {
 }
 
 /* Table */
+
 table {
 	font-size: 1.2rem;
 	border-collapse: collapse;
@@ -463,3 +473,4 @@ tr:nth-child(even) {
 tr:hover {
 	background-color: #f5f5f5;
 }
+/*# sourceMappingURL=nexmoe.css.map */

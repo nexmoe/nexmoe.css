@@ -1,0 +1,74 @@
+/* Form */
+
+button:active,
+input:active {
+	transform: translateY(2px);
+	transition: transform 0.1s;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	appearance: none;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-top: 0;
+	margin-right: 0.3rem;
+	margin-left: 0;
+	vertical-align: middle;
+	padding: 0;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+	background-image: var(--icon-checkbox);
+	background-position: center;
+	background-size: 0.75em auto;
+	background-repeat: no-repeat;
+	background-color: var(--color-primary);
+}
+
+input[type="radio"] {
+	border-radius: 50%;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	cursor: pointer;
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+}
+
+button,
+input,
+select {
+	transition: all 0.1s ease-in-out;
+}
+
+button:hover,
+input:hover,
+select:hover,
+textarea:hover {
+	box-shadow: 0 0 0 2px var(--color-hover);
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 1.2rem;
+	border: 2px solid var(--color-primary);
+	border-radius: var(--border-radius);
+	padding: 0.6rem 1rem;
+}
+
+button[text] {
+	background-color: transparent;
+	color: var(--color-primary);
+	border-color: transparent;
+}
+
+input[type="color"] {
+	padding: 1px 4px;
+}

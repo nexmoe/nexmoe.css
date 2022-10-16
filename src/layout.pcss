@@ -1,0 +1,59 @@
+/* Layout */
+
+body {
+	margin: 0;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	line-height: 1.5;
+	padding: 0 3rem;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 0 1rem;
+	}
+}
+
+header {
+	text-align: center;
+	line-height: 1.7;
+}
+
+header h2 {
+	border-bottom: none;
+}
+
+footer {
+	padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+	footer {
+		padding: 2rem 1rem;
+	}
+}
+
+main {
+	max-width: 960px;
+	margin: 50px auto;
+	padding: 0 1rem;
+}
+
+section {
+	margin: 4rem 0;
+}
+
+article {
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	border: 2px solid var(--color-text);
+	box-shadow: 0 4px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
+article > *:first-child {
+	margin-top: 0;
+}
+
+article > *:last-child {
+	margin-bottom: 0;
+}

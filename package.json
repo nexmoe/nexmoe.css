@@ -3,8 +3,17 @@
   "version": "0.5.6",
   "description": "Use only HTML to write modern websites with smooth animations and beautiful interfaces.",
   "main": "nexmoe.css",
+  "scripts": {
+    "build": "postcss src/nexmoe.pcss -o nexmoe.css -m && postcss src/nexmoe.pcss -o nexmoe.min.css -m --env production",
+    "dev": "postcss src/nexmoe.pcss -o nexmoe.dev.css --watch"
+  },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "cz-conventional-changelog": "^3.3.0",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0"
   },
   "config": {
     "commitizen": {

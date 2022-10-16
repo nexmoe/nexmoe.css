@@ -1,0 +1,93 @@
+/* Other */
+
+details summary::marker {
+	content: none;
+}
+details summary::after {
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	margin-top: 0.25rem;
+	float: right;
+	transform: rotate(-90deg);
+	background-image: var(--icon-summary);
+	background-position: right center;
+	background-size: 1rem auto;
+	background-repeat: no-repeat;
+	content: "";
+	transition: transform 0.2s ease-in-out;
+}
+
+details[open] summary::after {
+	transform: rotate(0deg);
+}
+
+details summary {
+	padding: 1rem;
+}
+
+details + div {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 1rem;
+	opacity: 0;
+	transition: max-height 0.2s ease-in-out;
+}
+
+details[open] + div {
+	max-height: 1000px;
+	opacity: 1;
+	border-top: 2px solid var(--color-text);
+}
+
+input[type="radio"],
+input[type="checkbox"],
+label,
+details {
+	cursor: pointer;
+}
+
+label > input:not([type="checkbox"]):not([type="radio"]),
+label > select {
+	display: block;
+	margin-top: 0.3em;
+}
+
+dialog {
+	box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+	border: none;
+	border-radius: var(--border-radius);
+	padding: calc(var(--nexmoe-gap) * 1.5);
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	animation-name: dialogScaleIn;
+	animation-duration: 0.2s;
+}
+
+@keyframes dialogScaleIn {
+	from {
+		transform: scale(0.5, 0.5);
+	}
+
+	to {
+		transform: scale(1, 1);
+	}
+}
+
+dialog menu {
+	display: flex;
+	gap: var(--nexmoe-gap);
+	justify-content: flex-end;
+	margin-bottom: 0;
+}
+
+dialog fieldset {
+	border: 0;
+	margin: unset;
+	padding: unset;
+}
+
+dialog fieldset legend {
+	font-size: 1.5rem;
+	margin-bottom: var(--nexmoe-gap);
+}

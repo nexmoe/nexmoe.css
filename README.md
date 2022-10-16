@@ -21,6 +21,12 @@ Paste this into the `<head>` of your HTML:
 <link rel="stylesheet" href="https://unpkg.com/nexmoe.css">
 ```
 
+or
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/nexmoe.css@latest/nexmoe.min.css">
+```
+
 ## NPM
 
 ```sh
